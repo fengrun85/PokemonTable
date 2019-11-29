@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lNK-2g-5Cl">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,9 +13,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -19,6 +23,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-190" y="106"/>
+        </scene>
+        <!--Pokemon Table View Controller-->
+        <scene sceneID="Zg2-GO-chh">
+            <objects>
+                <tableViewController id="lNK-2g-5Cl" customClass="PokemonTableViewController" customModule="PokemonTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UIU-Tg-MUA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="100" id="Wkl-3K-Mtn" customClass="PokemonTableViewCell" customModule="PokemonTable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wkl-3K-Mtn" id="ouW-OM-26O">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ADp-NT-ZVI">
+                                            <rect key="frame" x="25" y="13" width="136" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="136" id="9XX-7k-TNJ"/>
+                                                <constraint firstAttribute="height" constant="100" id="Rfm-rU-IbN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type : Grass, Poison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAb-rI-Qq6">
+                                            <rect key="frame" x="181" y="70.5" width="190.5" height="26.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-Jh-EhH">
+                                            <rect key="frame" x="181" y="21" width="93" height="26.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name : Bulbasaur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYQ-Ug-HYE">
+                                            <rect key="frame" x="181" y="48.5" width="135" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oYQ-Ug-HYE" firstAttribute="leading" secondItem="ADp-NT-ZVI" secondAttribute="trailing" constant="20" id="5hq-yX-Ymq"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ADp-NT-ZVI" secondAttribute="bottom" constant="2" id="6TQ-Gq-g5x"/>
+                                        <constraint firstItem="ADp-NT-ZVI" firstAttribute="leading" secondItem="ouW-OM-26O" secondAttribute="leadingMargin" constant="5" id="9hr-Kf-EOa"/>
+                                        <constraint firstItem="oXo-Jh-EhH" firstAttribute="leading" secondItem="ADp-NT-ZVI" secondAttribute="trailing" constant="20" id="ABX-dF-cEK"/>
+                                        <constraint firstItem="oYQ-Ug-HYE" firstAttribute="top" secondItem="oXo-Jh-EhH" secondAttribute="bottom" constant="1" id="F7v-Yv-Zex"/>
+                                        <constraint firstItem="DAb-rI-Qq6" firstAttribute="leading" secondItem="ADp-NT-ZVI" secondAttribute="trailing" constant="20" id="X0U-IU-qey"/>
+                                        <constraint firstItem="DAb-rI-Qq6" firstAttribute="top" secondItem="oYQ-Ug-HYE" secondAttribute="bottom" constant="1" id="iK8-l4-D1B"/>
+                                        <constraint firstItem="ADp-NT-ZVI" firstAttribute="top" secondItem="ouW-OM-26O" secondAttribute="topMargin" constant="2" id="pjW-En-nez"/>
+                                        <constraint firstItem="oXo-Jh-EhH" firstAttribute="top" secondItem="ouW-OM-26O" secondAttribute="topMargin" constant="10" id="qPK-Bz-Wal"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="oYQ-Ug-HYE" id="vQL-Jb-YdO"/>
+                                    <outlet property="numberLabel" destination="oXo-Jh-EhH" id="R3U-Aq-rVZ"/>
+                                    <outlet property="pic" destination="ADp-NT-ZVI" id="82T-Rn-E6x"/>
+                                    <outlet property="typeLabel" destination="DAb-rI-Qq6" id="gCQ-hN-w2x"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="lNK-2g-5Cl" id="Hae-s0-dz1"/>
+                            <outlet property="delegate" destination="lNK-2g-5Cl" id="Oz3-HO-Aio"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jZ-hI-XEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649.27536231884062" y="106.47321428571428"/>
         </scene>
     </scenes>
 </document>
