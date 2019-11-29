@@ -9,7 +9,19 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
+    var selectedPokemon:pokemon!
+    
+    @IBOutlet weak var pokemonPic: UIImageView!
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var typeLabel: UILabel!
+    
+    @IBOutlet weak var secondaryTypeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
