@@ -15,7 +15,7 @@ class PokemonTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.topItem?.title="PokeDex"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -90,5 +90,13 @@ class PokemonTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPokemonDetail"{
+            let destVC = segue.destination as! DetailsViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            destVC.selectedPokemon = PokemonsList[indexPath.row]
+        }
+    }
 
 }

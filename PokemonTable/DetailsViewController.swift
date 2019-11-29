@@ -26,7 +26,16 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        pokemonPic.image = UIImage(named: "\(selectedPokemon.picture)")
+        numberLabel.text = "Number : \(selectedPokemon.number)"
+        nameLabel.text = "Name : \(selectedPokemon.name)"
+        typeLabel.text = "Type : \(selectedPokemon.type)"
+        secondaryTypeLabel.text = "Secondary Type : \(selectedPokemon.secondType)"
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        }
     
 
     /*
